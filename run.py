@@ -1,11 +1,10 @@
-
 import sys
 #print(sys.argv[1])
 
 if len(sys.argv) == 1:
-	print("Pro překlad Morseovky na text napiš 'M',")
-	print("pro překlad textu do morseovky napiš 'T': ")
-	co = input()
+	print("Pro překlad Morseovky na text napiš 'M'")
+	print("Pro překlad textu do morseovky napiš 'T'")
+	exit(1)
 else:
 	co = sys.argv[1].upper()
 
