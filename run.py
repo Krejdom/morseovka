@@ -1,11 +1,13 @@
-print("------------------------------------------------------------")
-print("                Překladač Morseovy abecedy                ")
-print()
 
-print("Pro překlad Morseovky na text napiš 'M',")
-print("pro překlad textu do morseovky napiš 'T': ")
+import sys
+#print(sys.argv[1])
 
-co = input().upper()
+if len(sys.argv) == 1:
+	print("Pro překlad Morseovky na text napiš 'M',")
+	print("pro překlad textu do morseovky napiš 'T': ")
+	co = input()
+else:
+	co = sys.argv[1].upper()
 
 def JakyPreklad(co):
 	if co == 'M':
@@ -14,7 +16,6 @@ def JakyPreklad(co):
 		return TextToMorse(zprava)
 	else:
 		pass
-print()
 
 def UpravaZpravy(zprava):
 	zprava = zprava.lower()
@@ -32,7 +33,7 @@ def UpravaZpravy(zprava):
 	zprava = zprava.replace("ó", "o")
 	return zprava
 
-zprava = UpravaZpravy(input("Zadej text, který chceš přeložit: "))
+zprava = UpravaZpravy(input())
 
 slovnik = {'.-' : 'a', '-...' : 'b', '-.-.' : 'c', '-..' : 'd', '.' : 'e', '..-.' : 'f', '--.' : 'g', '....' : 'h', '----' : 'ch', '..' : 'i', '.---' : 'j', '-.-' : 'k', '.-..' : 'l', '--' : 'm', '-.' : 'n', '---' : 'o', '.--.' : 'p', '--.-' : 'q', '.-.': 'r', '...' : 's', '-' : 't', '..-' : 'u', '...-' : 'v', '.--' : 'w', '-..-' : 'x', '-.--' : 'y', '--..' : 'z',  '.-.-.-' : '. ',  '' : ' ', '--..--' : ',', '..--..' : '?'}
 #slovnik2 = {'a': '.-', 'b' : '-...', 'c' : '-.-.', 'd' : '-..', 'e' : '.', 'f' : '..-.', 'g' : '--.', 'h' : '....', 'ch' : '----','i' : '..','j' : '.---', 'k' : '-.-', 'l' : '.-..', 'm' : '--', 'n' : '-.', 'o' : '---', 'p' : '.--.', 'q' : '--.-', 'r' : '.-.', 's' : '...', 't' : '-', 'u' : '..-', 'v' : '...-', 'w' : '.--', 'x' : '-..-', 'y' : '-.--', 'z' : '--..', ' ' : '', '.' : '//', '?' : '..--..', ',' : '--..--'}
@@ -72,8 +73,4 @@ def TextToMorse(zprava):
 	return text
 
 print()
-print("Překlad:", JakyPreklad(co))
-
-
-import sys
-print(sys.argv)
+print(JakyPreklad(co))
