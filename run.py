@@ -2,8 +2,9 @@ import sys
 #print(sys.argv[1])
 
 if len(sys.argv) == 1:
-	print("Pro překlad Morseovky na text napiš 'M'")
-	print("Pro překlad textu do morseovky napiš 'T'")
+	print("usage: morse [M|T]", file=sys.stderr)
+	print("Pro překlad Morseovky na text napiš 'M'", file=sys.stderr)
+	print("Pro překlad textu do morseovky napiš 'T'", file=sys.stderr)
 	exit(1)
 else:
 	co = sys.argv[1].upper()
@@ -35,7 +36,6 @@ def UpravaZpravy(zprava):
 zprava = UpravaZpravy(input())
 
 slovnik = {'.-' : 'a', '-...' : 'b', '-.-.' : 'c', '-..' : 'd', '.' : 'e', '..-.' : 'f', '--.' : 'g', '....' : 'h', '----' : 'ch', '..' : 'i', '.---' : 'j', '-.-' : 'k', '.-..' : 'l', '--' : 'm', '-.' : 'n', '---' : 'o', '.--.' : 'p', '--.-' : 'q', '.-.': 'r', '...' : 's', '-' : 't', '..-' : 'u', '...-' : 'v', '.--' : 'w', '-..-' : 'x', '-.--' : 'y', '--..' : 'z',  '.-.-.-' : '. ',  '' : ' ', '--..--' : ',', '..--..' : '?'}
-#slovnik2 = {'a': '.-', 'b' : '-...', 'c' : '-.-.', 'd' : '-..', 'e' : '.', 'f' : '..-.', 'g' : '--.', 'h' : '....', 'ch' : '----','i' : '..','j' : '.---', 'k' : '-.-', 'l' : '.-..', 'm' : '--', 'n' : '-.', 'o' : '---', 'p' : '.--.', 'q' : '--.-', 'r' : '.-.', 's' : '...', 't' : '-', 'u' : '..-', 'v' : '...-', 'w' : '.--', 'x' : '-..-', 'y' : '-.--', 'z' : '--..', ' ' : '', '.' : '//', '?' : '..--..', ',' : '--..--'}
 
 slovnik2 = {}
 for k, v in slovnik.items():
