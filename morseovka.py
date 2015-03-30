@@ -38,6 +38,7 @@ slovnik2["χ"] = "----"
 
 def UpravaZpravy(zprava):
 	zprava = zprava.lower()
+	zprava = zprava.strip()
 	zprava = zprava.replace("ě","e")
 	zprava = zprava.replace("š", "s")
 	zprava = zprava.replace("č", "c")

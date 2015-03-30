@@ -28,4 +28,6 @@ def test_spatneho_znaku():
 
 
 def test_na_vice_radku():
-	assert morseovka.TextToMorse("Ahoj\nheslo je KORÝŠ") == ".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///"
+	assert morseovka.TextToMorse("Ahoj\nheslo je KORÝŠ\n") == ".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///"
+
+
