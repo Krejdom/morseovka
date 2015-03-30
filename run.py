@@ -17,7 +17,6 @@ def JakyPreklad(co):
 	else:
 		pass
 
-zprava = input()
+zprava = sys.stdin.read()
 
-print()
 print(JakyPreklad(co))
