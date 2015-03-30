@@ -29,7 +29,8 @@ slovnik = {
 			'.-.-.-' : '. ', 
 			'' : ' ',
 			'--..--' : ',',
-			'..--..' : '?'
+			'..--..' : '?',
+			'\n' : '\n',
 			}
 
 slovnik2 = {v:k for k, v in slovnik.items()}
@@ -71,8 +72,11 @@ def TextToMorse(zprava):
 	zprava = UpravaZpravy(zprava)
 	text = ""
 	for znak in zprava:
+		if znak == "\n":
+			text += "/"
 		text += slovnik2[znak]
-		text += "/"
+		if znak != "\n":
+			text += "/"
 	while text[-3:] != "///":
 		text += "/"
 

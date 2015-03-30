@@ -25,3 +25,7 @@ def test_smichu_naopak():
 def test_spatneho_znaku():
 	with pytest.raises(KeyError):
 		morseovka.TextToMorse("螭")
+
+
+def test_na_vice_radku():
+	assert morseovka.TextToMorse("Ahoj\nheslo je KORÝŠ") == ".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///"
