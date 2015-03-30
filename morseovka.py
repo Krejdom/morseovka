@@ -59,7 +59,7 @@ def MorseToText(zprava):
 
 	morse = []
 	for i,znak in enumerate(zprava):
-		pismeno = slovnik.get(znak)
+		pismeno = slovnik[znak]
 		morse.append(pismeno)
 	if morse[-1] == None:
 		morse.pop(-1)
@@ -71,7 +71,7 @@ def TextToMorse(zprava):
 	zprava = UpravaZpravy(zprava)
 	text = ""
 	for znak in zprava:
-		text += slovnik2.get(znak)
+		text += slovnik2[znak]
 		text += "/"
 	while text[-3:] != "///":
 		text += "/"
