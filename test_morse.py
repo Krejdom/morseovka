@@ -33,3 +33,7 @@ def test_na_vice_radku():
 
 def test_vice_radku_naopak():
 	assert morseovka.MorseToText(".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///") == ("ahoj \nheslo je korys. ")
+
+
+def test_cisla_a_dalsi():
+	assert morseovka.TextToMorse("42!") == ("....-/..---/--..--///")
