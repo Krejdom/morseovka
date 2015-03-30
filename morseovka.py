@@ -47,3 +47,4 @@ def TextToMorse(zprava):
 		text += "/"
 
 	return text
+	
