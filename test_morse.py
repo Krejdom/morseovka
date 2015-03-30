@@ -11,3 +11,7 @@ def test_veta():
 
 def test_smichu():
 	assert morseovka.TextToMorse("cha cha cha") == "----/.-//----/.-//----/.-///"
+
+def test_smichu_naopak():
+	assert morseovka.MorseToText("----/.-//----/.-//----/.-") == "cha cha cha"
+
