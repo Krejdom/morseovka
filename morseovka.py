@@ -55,6 +55,7 @@ def UpravaZpravy(zprava):
 	return zprava
 
 def MorseToText(zprava):
+	zprava = zprava.replace('\n', '\n/')
 	zprava = zprava.replace('///', '/.-.-.-/')
 	zprava = zprava.replace('//', '//')
 	zprava = zprava.split("/")
