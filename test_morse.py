@@ -32,4 +32,4 @@ def test_na_vice_radku():
 
 
 def test_vice_radku_naopak():
-	assert morseovka.MorseToText(".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///") == ("ahoj \nheslo je korys.  ")
+	assert morseovka.MorseToText(".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///") == ("ahoj \nheslo je korys. ")
