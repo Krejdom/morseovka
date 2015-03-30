@@ -8,3 +8,6 @@ def test_Amorse():
 
 def test_veta():
 	assert morseovka.TextToMorse("Tohle je věta") == "-/---/..../.-.././/.---/.//...-/./-/.-///"
+
+def test_smichu():
+	assert morseovka.TextToMorse("cha cha cha") == "----/.-//----/.-//----/.-///"

@@ -32,11 +32,8 @@ slovnik = {
 			'..--..' : '?'
 			}
 
-slovnik2 = {}
-for k, v in slovnik.items():
-	slovnik2[v] = k
-
 slovnik2 = {v:k for k, v in slovnik.items()}
+slovnik2["χ"] = "----"
 
 def UpravaZpravy(zprava):
 	zprava = zprava.lower()
@@ -52,6 +49,7 @@ def UpravaZpravy(zprava):
 	zprava = zprava.replace("ů", "u")
 	zprava = zprava.replace("ú", "u")
 	zprava = zprava.replace("ó", "o")
+	zprava = zprava.replace("ch", "χ")
 	return zprava
 
 def MorseToText(zprava):
