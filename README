@@ -1,13 +1,29 @@
 MORSEOVKA
 
-Co to umí?
-Překládat morseovku na text a naopak.
+What it does?
+>> It traslates morse code to text and vice versa.
 
-Jak se to používá?
-Jako argument při spouštění zadejte M (pro překlad morseovky na text) nebo T (pro překlad textu na morseovku). Následně napište text či morseovku (tečka: .; čárka: -; oddělovač: /) a potvrďte.
+How to use it?
+>> As an argument type M (morse to text translation) or T (text to morse translation). Then type your text or morse code (dot: .; dash: -; separator: /) and press enter.
 
 GitHub
-https://github.com/Krejdom/morseovka
+>> https://github.com/Krejdom/morseovka
+
+License
+>> MIT
+
+---------
+
+MORSEOVKA
+
+Co to umí?
+>> Překládat morseovku na text a naopak.
+
+Jak se to používá?
+>> Jako argument při spouštění zadejte M (pro překlad morseovky na text) nebo T (pro překlad textu na morseovku). Následně napište text či morseovku (tečka: .; čárka: -; oddělovač: /) a potvrďte.
+
+GitHub
+>> https://github.com/Krejdom/morseovka
 
 Licence
-MIT
+>> MIT
