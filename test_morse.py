@@ -2,11 +2,11 @@ import pytest
 
 import morseovka
 
-def test_Atext():
+def test_atext():
     assert morseovka.TextToMorse("A") == ".-///"
 
 
-def test_Amorse():
+def test_amorse():
     assert morseovka.MorseToText(".-") == "a"
 
 

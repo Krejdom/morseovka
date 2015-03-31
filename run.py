@@ -1,4 +1,5 @@
 import sys
+
 from morseovka import MorseToText, TextToMorse
 
 if len(sys.argv) == 1:
