@@ -4,7 +4,7 @@ What it does?
 >> It traslates morse code to text and vice versa.
 
 How to use it?
->> As an argument type M (morse to text translation) or T (text to morse translation). Then type your text or morse code (dot: .; dash: -; separator: /) and press enter.
+>> As an argument type M (for morse to text translation) or T (for text to morse translation). Then type your text or morse code (dot: .; dash: -; separator: /) and press enter.
 
 GitHub
 >> https://github.com/Krejdom/morseovka

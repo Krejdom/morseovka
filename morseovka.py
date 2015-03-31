@@ -1,4 +1,4 @@
-slovnik = {
+dictionary = {
     '.-': 'a',
     '-...': 'b',
     '-.-.': 'c',
@@ -44,38 +44,38 @@ slovnik = {
     '-----': '0',
 }
 
-slovnik2 = {v:k for k, v in slovnik.items()}
-slovnik2["χ"] = "----"
+dictionary2 = {v:k for k, v in dictionary.items()}
+dictionary2["χ"] = "----"
 
-def UpravaZpravy(zprava):
-    zprava = zprava.lower()
-    zprava = zprava.strip()
-    zprava = zprava.replace("ě","e")
-    zprava = zprava.replace("š", "s")
-    zprava = zprava.replace("č", "c")
-    zprava = zprava.replace("ř", "r")
-    zprava = zprava.replace("ž", "z")
-    zprava = zprava.replace("ý", "y")
-    zprava = zprava.replace("á", "a")
-    zprava = zprava.replace("í", "i")
-    zprava = zprava.replace("é", "e")
-    zprava = zprava.replace("ů", "u")
-    zprava = zprava.replace("ú", "u")
-    zprava = zprava.replace("ó", "o")
-    zprava = zprava.replace("ch", "χ")
-    return zprava
+def message_modification(message):
+    message = message.lower()
+    message = message.strip()
+    message = message.replace("ě","e")
+    message = message.replace("š", "s")
+    message = message.replace("č", "c")
+    message = message.replace("ř", "r")
+    message = message.replace("ž", "z")
+    message = message.replace("ý", "y")
+    message = message.replace("á", "a")
+    message = message.replace("í", "i")
+    message = message.replace("é", "e")
+    message = message.replace("ů", "u")
+    message = message.replace("ú", "u")
+    message = message.replace("ó", "o")
+    message = message.replace("ch", "χ")
+    return message
 
 
-def MorseToText(zprava):
-    zprava = zprava.replace('\n', '\n/')
-    zprava = zprava.replace('///', '/.-.-.-/')
-    zprava = zprava.replace('//', '//')
-    zprava = zprava.split("/")
+def morse_to_text(message):
+    message = message.replace('\n', '\n/')
+    message = message.replace('///', '/.-.-.-/')
+    message = message.replace('//', '//')
+    message = message.split("/")
 
     morse = []
-    for i,znak in enumerate(zprava):
-        pismeno = slovnik[znak]
-        morse.append(pismeno)
+    for i,symbol in enumerate(message):
+        letter = dictionary[symbol]
+        morse.append(letter)
     if morse[-1] == None:
         morse.pop(-1)
     morse = ''.join(morse)
@@ -83,14 +83,14 @@ def MorseToText(zprava):
     return morse
 
 
-def TextToMorse(zprava):
-    zprava = UpravaZpravy(zprava)
+def text_to_morse(message):
+    message = message_modification(message)
     text = ""
-    for znak in zprava:
-        if znak == "\n":
+    for symbol in message:
+        if symbol == "\n":
             text += "/"
-        text += slovnik2[znak]
-        if znak != "\n":
+        text += dictionary2[symbol]
+        if symbol != "\n":
             text += "/"
     while text[-3:] != "///":
         text += "/"

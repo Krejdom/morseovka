@@ -1,23 +1,23 @@
 import sys
 
-from morseovka import MorseToText, TextToMorse
+from morseovka import morse_to_text, text_to_morse
 
 if len(sys.argv) == 1:
     print("usage: morse [M|T]", file=sys.stderr)
-    print("Pro překlad Morseovky na text napiš 'M'", file=sys.stderr)
-    print("Pro překlad textu do morseovky napiš 'T'", file=sys.stderr)
+    print("For Morse to text translation type 'M'", file=sys.stderr)
+    print("For text to Morse translation type 'T'", file=sys.stderr)
     exit(1)
 else:
-    co = sys.argv[1].upper()
+    argument = sys.argv[1].upper()
 
-def JakyPreklad(co):
-    if co == 'M':
-        return MorseToText(zprava)
-    elif co == 'T':
-        return TextToMorse(zprava)
+def which_translation(argument):
+    if argument == 'M':
+        return morse_to_text(message)
+    elif argument == 'T':
+        return text_to_morse(message)
     else:
         pass
 
-zprava = sys.stdin.read()
+message = sys.stdin.read()
 
-print(JakyPreklad(co))
+print(which_translation(argument))

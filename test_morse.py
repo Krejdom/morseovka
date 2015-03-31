@@ -3,37 +3,37 @@ import pytest
 import morseovka
 
 def test_atext():
-    assert morseovka.TextToMorse("A") == ".-///"
+    assert morseovka.text_to_morse("A") == ".-///"
 
 
 def test_amorse():
-    assert morseovka.MorseToText(".-") == "a"
+    assert morseovka.morse_to_text(".-") == "a"
 
 
 def test_veta():
-    assert morseovka.TextToMorse("Tohle je věta") == "-/---/..../.-.././/.---/.//...-/./-/.-///"
+    assert morseovka.text_to_morse("Tohle je věta") == "-/---/..../.-.././/.---/.//...-/./-/.-///"
 
 
 def test_smichu():
-    assert morseovka.TextToMorse("cha cha cha") == "----/.-//----/.-//----/.-///"
+    assert morseovka.text_to_morse("cha cha cha") == "----/.-//----/.-//----/.-///"
 
 
 def test_smichu_naopak():
-    assert morseovka.MorseToText("----/.-//----/.-//----/.-") == "cha cha cha"
+    assert morseovka.morse_to_text("----/.-//----/.-//----/.-") == "cha cha cha"
 
 
 def test_spatneho_znaku():
     with pytest.raises(KeyError):
-        morseovka.TextToMorse("螭")
+        morseovka.text_to_morse("螭")
 
 
 def test_na_vice_radku():
-    assert morseovka.TextToMorse("Ahoj\nheslo je KORÝŠ\n") == ".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///"
+    assert morseovka.text_to_morse("Ahoj\nheslo je KORÝŠ\n") == ".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///"
 
 
 def test_vice_radku_naopak():
-    assert morseovka.MorseToText(".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///") == ("ahoj \nheslo je korys. ")
+    assert morseovka.morse_to_text(".-/..../---/.---//\n...././.../.-../---//.---/.//-.-/---/.-./-.--/...///") == ("ahoj \nheslo je korys. ")
 
 
 def test_cisla_a_dalsi():
-    assert morseovka.TextToMorse("42!") == ("....-/..---/--..--///")
+    assert morseovka.text_to_morse("42!") == ("....-/..---/--..--///")
