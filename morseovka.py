@@ -63,6 +63,15 @@ def message_modification(message):
     message = message.replace("ú", "u")
     message = message.replace("ó", "o")
     message = message.replace("ch", "χ")
+    message = message.replace("ď", "d")
+    message = message.replace("ť", "t")
+    message = message.replace("ň", "n")
+    message = message.replace("ľ", "l")
+    message = message.replace("ä", "e")
+    message = message.replace("ô", "o")
+    message = message.replace("ŕ", "r")
+    message = message.replace("ĺ", "l")
+
     return message
 
 
