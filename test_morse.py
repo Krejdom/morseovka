@@ -14,6 +14,10 @@ def test_veta():
     assert morseovka.text_to_morse("Tohle je věta") == "-/---/..../.-.././/.---/.//...-/./-/.-///"
 
 
+def test_veta_slovak():
+    assert morseovka.text_to_morse("Ľubozvučné slovenské slová sú guľôčka, stĺp, pŕŕ!") == ".-../..-/-.../---/--../...-/..-/-.-./-././/.../.-../---/...-/./-./.../-.-/.//.../.-../---/...-/.-//.../..-//--./..-/.-../---/-.-./-.-/.-/--..--//.../-/.-../.--./--..--//.--./.-./.-./--...-///"
+
+
 def test_smichu():
     assert morseovka.text_to_morse("cha cha cha") == "----/.-//----/.-//----/.-///"
 
